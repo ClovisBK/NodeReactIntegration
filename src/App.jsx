@@ -2,6 +2,7 @@ import React from 'react'
 import './index.css'
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import Navbar from './Components/Navbar';
+import Users from './Components/Users';
 
 const Home = () => <h2>Welcome to the Card system</h2>;
 const Login = () => <h2>Login Page</h2>;
@@ -15,11 +16,13 @@ const App = () => {
           <Link to="/">Home</Link>
           <Link to="/login" style={{margin: "0 10px"}}>Login</Link>
           <Link to="/register">Register</Link>
+          <Link to="/users">Users</Link>
       </Navbar>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/users' element={<Users/>}/>
       </Routes>
     </Router>
   )
