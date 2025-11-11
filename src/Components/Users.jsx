@@ -1,5 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import api from '../api/api'
+import '../Styles/form.css'
 
 const Users = () => {
     const [data, setData] = useState([]);
@@ -7,27 +9,27 @@ const Users = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchUsers = async () => {
             try{
-                const response = await axios.get('/V1/api/users');
-
+                const response = await api.get('/users');
                 setData(response.data);
-                setLoading(false);
+                
             }catch(err){
-                setError(err.message);
+                setError(err.response?.data || "Error fetching users");
+            }finally{
                 setLoading(false);
             }
         }
-        fetchData();
+        fetchUsers();
     }, []);
 
     if(loading) return <div>Loading data...</div>;
-    if(error) return <div>Error: {error}</div>;
+    if(error) return <div style={{color: "red"}}>Error: {error}</div>;
 
   return (
     <div>
         <h2>User Profile Data</h2>
-        <table>
+        <table style={{border: "2", borderCollapse: "collapse"}}>
             <thead>
                 <tr>
                     <th>First Name</th>

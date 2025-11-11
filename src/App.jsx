@@ -3,10 +3,11 @@ import './index.css'
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Users from './Components/Users';
+import Register from './Components/Register';
+import Login from './Components/Login';
 
 const Home = () => <h2>Welcome to the Card system</h2>;
-const Login = () => <h2>Login Page</h2>;
-const Register = () => <h2>Registration Page</h2>;
+
 
 
 const App = () => {
