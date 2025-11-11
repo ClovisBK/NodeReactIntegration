@@ -27,9 +27,9 @@ const Users = () => {
     if(error) return <div style={{color: "red"}}>Error: {error}</div>;
 
   return (
-    <div>
+    <div className='user-table'>
         <h2>User Profile Data</h2>
-        <table style={{border: "2", borderCollapse: "collapse"}}>
+        <table>
             <thead>
                 <tr>
                     <th>First Name</th>
