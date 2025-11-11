@@ -28,7 +28,7 @@ try{
 }
 };
   return (
-    <div className='register-user'>
+    <div className='form-container'>
       <h2>Registration page</h2>
         <form onSubmit={handleSubmit}>
             <input type="text" name='firstName' placeholder='First Name' onChange={handleChange} />

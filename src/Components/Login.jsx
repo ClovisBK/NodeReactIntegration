@@ -22,7 +22,7 @@ const Login = () => {
             if(token){
                 localStorage.setItem("token", token);
                 setMessage("Login Successful");
-                // navigate("/users");
+                navigate("/users");
             }else{
                 setError("Login failed: No token received");
             }
@@ -31,8 +31,8 @@ const Login = () => {
         }
     };
   return (
-    <div className='login-user'>
-        <h1>Login Page for users.</h1>
+    <div className='form-container'>
+        <h2>Login Page for users.</h2>
 
         <form onSubmit={handleSubmit}>
             <input type="email" name="email" placeholder='Email' onChange={handleChange} />
