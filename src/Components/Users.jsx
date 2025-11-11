@@ -46,7 +46,7 @@ const Users = () => {
                         <td>{user.lastName}</td>
                         <td>{user.email}</td>
                         <td>{user.address}</td>
-                        <td>{user.phone}</td>
+                        <td>{user.phoneNumber}</td>
                     </tr>
 
                 ))}
