@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import api from '../api/api';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Login = () => {
     const [credentials, setCredentials] = useState({email: "", password: ""});
@@ -32,13 +32,17 @@ const Login = () => {
     };
   return (
     <div className='form-container'>
-        <h2>Login Page for users.</h2>
+        <h2>Login.</h2>
 
         <form onSubmit={handleSubmit}>
             <input type="email" name="email" placeholder='Email' onChange={handleChange} />
             <input type="password" name="password" placeholder='Password' onChange={handleChange} />
             <button type='submit'>Login</button>
         </form>
+        <span style={{color: "blue"}}>Don't have an account? 
+         <Link to="/register" style={{fontSize: "1.1rem", color: "green"}}> sign up!</Link>
+        </span>
+        
         {message && <p style={{color: "blue"}}>{message}</p>}
         {error && <p style={{color: "red"}}>{error}</p>}
 

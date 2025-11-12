@@ -6,9 +6,7 @@ import Users from './Components/Users';
 import Register from './Components/Register';
 import Login from './Components/Login';
 import ProtectedRoute from './Components/ProtectedRoute';
-
-const Home = () => <h2>Welcome to the Card system</h2>;
-
+import Home from './Components/Home';
 
 
 const App = () => {
