@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar';
 import Users from './Components/Users';
 import Register from './Components/Register';
 import Login from './Components/Login';
+import ProtectedRoute from './Components/ProtectedRoute';
 
 const Home = () => <h2>Welcome to the Card system</h2>;
 
@@ -23,7 +24,13 @@ const App = () => {
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
-        <Route path='/users' element={<Users/>}/>
+        <Route 
+            path='/users'
+            element={<ProtectedRoute>
+              <Users/>
+            </ProtectedRoute>
+            }
+        />
       </Routes>
     </Router>
   )
