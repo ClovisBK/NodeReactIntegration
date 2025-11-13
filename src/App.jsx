@@ -7,6 +7,7 @@ import Register from './Components/Register';
 import Login from './Components/Login';
 import ProtectedRoute from './Components/ProtectedRoute';
 import Home from './Components/Home';
+import ForgotPassword from './Components/ForgotPassword';
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/forgot-password' element={<ForgotPassword/>}/>
         <Route 
             path='/users'
             element={<ProtectedRoute>
