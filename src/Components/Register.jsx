@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import api from '../api/api';
 import axios from 'axios';
 import '../Styles/form.css'
+import { useNavigate } from 'react-router-dom';
 const Register = () => {
+const navigate = useNavigate();
 const [form, setForm] = useState({
     firstName: '',
     lastName: '',
@@ -72,7 +74,7 @@ try{
         dateOfBirth: "",
     });
     setErrors({});
-    window.location.href = "/users";
+    navigate("/users");
 }catch(error){
     setMessage(error.response?.data || "Error during registration");
 }

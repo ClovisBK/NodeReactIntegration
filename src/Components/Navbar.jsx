@@ -1,10 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import '../Styles/form.css';
 const Navbar = () => {
+const navigate = useNavigate();
+
     const handleLogout = () => {
         localStorage.removeItem("token");
-        window.location.href = "/login";
+         navigate("/login");
     }
   return (
     <nav className='navbar'>
