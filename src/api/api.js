@@ -3,9 +3,9 @@ import axios from "axios";
 
 const api = axios.create({
   baseURL:
-    import.meta.env.MODE === "development"
-      ? "/V1/api" 
-      : "https://jwtauthenticationnodejs-production.up.railway.app", 
+    import.meta.env.NODE_ENV === "production"
+      ? "https://jwtauthenticationnodejs-production.up.railway.app" 
+      : "/V1/api", 
   withCredentials: true,
 });
 
