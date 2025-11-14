@@ -6,7 +6,7 @@ const baseURL =
     : "/V1/api"; // local dev uses proxy
 
 const api = axios.create({
-  baseURL,
+  baseURL:import.meta.evn.VITE_API_URL || "/V1/api",
   withCredentials: true,
 });
 
