@@ -7,11 +7,10 @@ export default defineConfig({
   server: {
     proxy: {
     '/V1/api': {
-      target: 'http://localhost:3000',
+      target: 'https://jwtauthenticationnodejs-production.up.railway.app',
       changeOrigin: true,
       secure: false,
     },
     },
   },
-
 });
