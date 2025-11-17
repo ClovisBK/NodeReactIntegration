@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import api from '../api/api';
 import axios from 'axios';
 import '../Styles/form.css'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 const Register = () => {
 const navigate = useNavigate();
 const [form, setForm] = useState({
@@ -141,7 +141,9 @@ try{
 
             <button type='submit'>Register</button>
         </form>
+        <div>Already have an account? <Link to="/login">Log in</Link></div>
         {message && <p style={{color: "green"}}>{message}</p>}
+    
     </div>
   )
 }
