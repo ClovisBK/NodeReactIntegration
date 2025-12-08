@@ -37,6 +37,7 @@ const Users = () => {
                     <th>Email</th>
                     <th>Address</th>
                     <th>Phone</th>
+                    
                 </tr>
             </thead>
             <tbody>

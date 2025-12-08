@@ -6,11 +6,11 @@ const Home = () => {
   return (
     <div className='home-container'>
       <div>
-        <h1>Manage Your virtual Cards Effortlessly</h1>
-        <p>Create, control and minitor virtual payment cards in real-time</p>
+        <h1>Welcome to your health assurance environment</h1>
+        <p>Health indeed is wealth. At PharmClo, you can trust our certified vendors with your health</p>
       </div>
       <div>
-        <img src={image} alt="" />
+        
       </div>
     </div>
   )
