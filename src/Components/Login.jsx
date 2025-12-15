@@ -39,25 +39,28 @@ const Login = () => {
             <input type="password" name="password" placeholder='Password' onChange={handleChange} />
             <button type='submit'>Login</button>
         </form>
-        <div style={{color: "blue",}}>
+        <div style={{color: "blue"}}>
 
-         <Link to="/forgot-password" style={{marginLeft: "100px", color: "blue"}}>Forgot Password</Link>
+         <Link to="/forgot-password" style={{
+            marginLeft: "10px", 
+            color: "blue", 
+            marginTop: "-10px",
+            textDecoration: "none",
+            fontSize: "15px"
+            }}>Forgot Password?</Link>
+         <Link to="/register" style={{
+            marginLeft: "230px",
+             color: "blue",
+             fontSize: "15px",
+             textDecoration: "none"
+             }}>Sign Up</Link>
         </div>
         
         {message && <p style={{color: "blue"}}>{message}</p>}
         {error && <p style={{color: "red"}}>{error}</p>}
         
     </div>
-    <div className='form-container'>
-        <h2>Don't have an acctount?</h2>
-        
-            <Link to="/register" style={{fontSize: "1.1rem", color: "white", textDecoration:"none"}}>
-            <button>
-                Sign up
-            </button>
-            </Link>
-        
-    </div>
+
     </>
   )
 }
